@@ -34,16 +34,16 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
 | Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+| Elk      | Gateway  |40.78.4.255 | Linux            |
+| Web 1    | LBalancer| FTE-IP     | Linux            |
+| Web 3    | LBalancer| FTE-IP     | Linux            |
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Jumpbox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+- _TODO: Add whitelisted IP addresses? 73.136.252.160
 
 Machines within the network can only be accessed by SSH.
 - _TODO: Which machine did you allow to access your ELK VM? Jumpbox VM  What was its IP address? 10.0.0.4
@@ -56,7 +56,7 @@ A summary of the access policies in place can be found in the table below.
 | Web 1    | No                    | 10.0.0.5           |
 | Web 2    | No                    | 10.0.0.6           |
 | Web 3    | No                    | 10.0.0.7           |
-| Elk VM   | No                    | 10.1.0.4          |
+| Elk VM   | No                    | 10.1.0.4           |
 
 ### Elk Configuration
 
@@ -75,6 +75,13 @@ The playbook implements the following tasks:
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
 ![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+
+azadmin@Elk-VM:~$ sudo docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED      STATUS        PORTS                                                                              NAMES
+4c38ca3c9825   sebp/elk:761   "/usr/local/bin/star…"   7 days ago   Up 29 hours   0.0.0.0:5044->5044/tcp, 0.0.0.0:5601->5601/tcp, 0.0.0.0:9200->9200/tcp, 9300/tcp   elk
+azadmin@Elk-VM:~$
+
+
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
