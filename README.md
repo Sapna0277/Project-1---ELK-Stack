@@ -75,7 +75,7 @@ The playbook implements the following tasks:
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
 ![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
-![(https://github.com/Sapna0277/Project-1---ELK-Stack/blob/a9a10281f6e852b85e9757204710cfc3f5fa526a/Docker%20PS.JPG)
+![Docker PS.JPEG](https://github.com/Sapna0277/Project-1---ELK-Stack/blob/a9a10281f6e852b85e9757204710cfc3f5fa526a/Docker%20PS.JPG)
 
 azadmin@Elk-VM:~$ sudo docker ps
 CONTAINER ID   IMAGE          COMMAND                  CREATED      STATUS        PORTS                                                                              NAMES
